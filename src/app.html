@@ -1,4 +1,43 @@
 <template>
-  <h1>${title}</h1>
-  <h2>${message}</h2>
+    <require from="materialize-css/dist/css/materialize.css"></require>
+
+    <div class="container">
+        <header class="header center">
+            <h1>${title}
+                <br>
+                <small>${message}</small>
+            </h1>
+            <button class="btn-large orange" click.delegate="openTapTarget('.cat-emperor-content')">What to do?</button>
+        </header>
+    </div>
+    <div class="container">
+        <main class="main">
+            <div class="row">
+                <div class="col sm12 m6 offset-m3">
+                    <div class="card horizontal blue-grey">
+                        <div class="card-image">
+                            <img src="images/jeanpaul.jpg" alt="The Cat Emperor of mankind">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content white-text">
+                                <span class="card-title">Jean Paul</span>
+                                <p>
+                                    The Cat Emperor of mankind
+                                </p>
+                            </div>
+                            <div class="card-action">
+                                <a click.delegate="praiseCatEmperor()" href="#"><i class="material-icons orange-text" id="cat-god">album</i> Praise him</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="tap-target orange cat-emperor-content" data-activates="cat-god">
+            <div class="tap-target-content">
+                <h5>Jean Paul</h5>
+                <p>The cat god. Praise him for massive glory.</p>
+            </div>
+        </div>
+    </div>
 </template>
